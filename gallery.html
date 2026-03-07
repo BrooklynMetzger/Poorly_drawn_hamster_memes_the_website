@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Hamster Picture Picker</title>
+  
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-grid-base bg-grid-pattern min-h-screen p-8 font-comico">
+  <div class="star-container fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
+    <div id="stars"></div>
+  </div>
+
+  <nav class="w-fit mx-auto bg-peach p-4 mb-8 rounded-xl shadow-sm flex justify-center gap-8 font-comico text-xl text-purple">
+    <a href="./index.html" class="hover:text-purple hover:underline transition-colors">🐹 Home</a>
+    <a href="./gallery.html" class="hover:text-purple hover:underline transition-colors">📖 Gallery</a>
+  </nav>
+
+  <main class="max-w-4xl mx-auto flex flex-col items-center text-center">
+    <h1 class="text-4xl md:text-5xl font-comico text-background mb-6 drop-shadow-sm">
+      Unholy Gallery of Hamsters
+    </h1>
+    
+   <div id="sticker-container" class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      </div>
+  </main>
+  <div id="image-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn" >✖</button>
+      
+      <img id="modal-image" src="" alt="Selected Hamster" style="max-width: 250px; max-height: 250px; border-radius: 15px; object-fit: contain;">
+      
+      <div style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+        <button class="button" id="modal-copy-btn">Copy Link</button>
+        <button class="button" id="modal-download-btn">Download</button>
+      </div>
+    </div>
+  </div>
+ <script src="./scripts/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</body>
+</html>

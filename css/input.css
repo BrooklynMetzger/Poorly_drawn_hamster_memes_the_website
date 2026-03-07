@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "./fontsStyle/array.css"; /* This pulls in your custom fonts */
+@import "./fontsStyle/comico.css";
+@import "./fontsStyle/zina.css";
+@import "./theme.css";
+@import "./assets/stars.css";
+@import "./assets/buttons.css";
+@import "./assets/socialsIcon.css"
+
+/* 1. Mobile-First Layout (Stacked) */
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
+.layout_buttons {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+.body { 
+  grid-area: body; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; /* This prevents the button from stretching vertically */
+  gap: 2rem; /* Reduces the massive gap-40 from your HTML */
+}
+
+/* 2. Desktop Layout */
+@media (min-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header header header"
+      "body"
+      "footer footer footer";
+  }
+
+}
